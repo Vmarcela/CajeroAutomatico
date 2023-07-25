@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cajero Automático</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cajero Automático</h1>
+    <label for="selectAccount">Seleccionar cuenta:</label>
+    <select id="selectAccount">
+      <option value="0">Persona 1</option>
+      <option value="1">Persona 2</option>
+      <option value="2">Persona 3</option>
+    </select>
+    <input type="password" id="password" placeholder="Ingrese el password">
+    <button onclick="login()">Ingresar</button>
+
+    <div id="options" class="hidden">
+      <button onclick="consultarSaldo()">Consultar saldo</button>
+      <button onclick="ingresarMonto()">Ingresar monto</button>
+      <button onclick="retirarMonto()">Retirar monto</button>
+    </div>
+
+    <div id="result" class="hidden">
+      <p id="operation"></p>
+      <p id="newBalance"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
